@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_08_07_013836) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "chat_id"
+    t.integer "user_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,11 +36,11 @@ ActiveRecord::Schema.define(version: 2019_08_07_013836) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "picture"
+    t.string "name"
     t.integer "age"
     t.string "location"
     t.integer "reputation"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
