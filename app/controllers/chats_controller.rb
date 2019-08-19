@@ -2,12 +2,12 @@ class ChatsController < ApplicationController
 
     def index
         @chats = Chat.all
-        render json: @chats.to_json(:include => [:users, :messages])
+        render json: @chats.to_json(:include => [:users, :topic, :messages])
     end
 
     def show
         @chat = Chat.find(params[:id])
-        render json: @chat.to_json(:include => [:users, :messages])
+        render json: @chat.to_json(:include => [:users, :topic, :messages])
     end
 
     def new
