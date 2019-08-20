@@ -4,12 +4,12 @@ Chat.destroy_all
 UserChat.destroy_all
 Message.destroy_all
 
-user1 = User.create(email: 'shujaat@test.com', password: 'password', name: "Shujaat Azim", age: 31, location: "Potomac, MD", reputation: 20)
-user2 = User.create(email: 'nicholas@test.com', password: 'password', name: "Nicholas Orochena", age: 25, location: "Potomac, MD", reputation: 14)
-user3 = User.create(email: 'marcus@test.com', password: 'password', name: "Marcus Orochena", age: 31, location: "Potomac, MD", reputation: 10)
-user4 = User.create(email: 'omar@test.com', password: 'password', name: "Omar Ayyub", age: 30, location: "Washington, DC", reputation: 17)
-user5 = User.create(email: 'joseph@test.com', password: 'password', name: "Joseph Arias", age: 26, location: "Manassas, VA", reputation: 12)
-user6 = User.create(email: 'jenny@test.com', password: 'password', name: "Jenny Ingram", age: 32, location: "Arlington, VA", reputation: 18)
+user1 = User.create(email: 'shujaat@test.com', password: 'password', name: "Shujaat Azim", age: 31, location: "Potomac, MD", reputation: 20, image: "https://robohash.org/shujaat@test.com")
+user2 = User.create(email: 'nicholas@test.com', password: 'password', name: "Nicholas Orochena", age: 25, location: "Potomac, MD", reputation: 14, image: "https://robohash.org/nicholas@test.com")
+user3 = User.create(email: 'marcus@test.com', password: 'password', name: "Marcus Orochena", age: 31, location: "Potomac, MD", reputation: 10, image: "https://robohash.org/marcus@test.com")
+user4 = User.create(email: 'omar@test.com', password: 'password', name: "Omar Ayyub", age: 30, location: "Washington, DC", reputation: 17, image: "https://robohash.org/omar@test.com")
+user5 = User.create(email: 'joseph@test.com', password: 'password', name: "Joseph Arias", age: 26, location: "Manassas, VA", reputation: 12, image: "https://robohash.org/joseph@test.com")
+user6 = User.create(email: 'jenny@test.com', password: 'password', name: "Jenny Ingram", age: 32, location: "Arlington, VA", reputation: 18, image: "https://robohash.org/jenny@test.com")
 
 topic1 = Topic.create(name: "Stem Cell Research")
 topic2 = Topic.create(name: "Gun Control")
