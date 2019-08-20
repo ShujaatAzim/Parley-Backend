@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user!
 
     def index
         @users = User.all
@@ -10,36 +11,8 @@ class UsersController < ApplicationController
         render json: @user.to_json(:include => [:chats, :messages])
     end
 
-
-    def new
-        @user = User.new
+    def whoami
+        render json: @current_user
     end
-
-
-    def create
-    end
-
-
-    def edit
-    end
-
-
-    def update
-    end
-
-
-    def destroy
-    end
-
-
-    private
-
-    def user_params
-    end
-
-    
-    def find_user
-    end
-
 
 end

@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+    before_action :authenticate_user!
 
     def index
         @messages = Message.all
@@ -16,6 +17,7 @@ class MessagesController < ApplicationController
 
     def create
         @message = Message.new(message_params)
+        @message.user = @current_user
         @message.save
         render json: @message
     end
