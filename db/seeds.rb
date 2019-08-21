@@ -4,7 +4,7 @@ Chat.destroy_all
 UserChat.destroy_all
 Message.destroy_all
 
-user1 = User.create(email: 'shujaat@test.com', password: 'password', name: "Shujaat Azim", age: 31, location: "Potomac, MD", reputation: 20, image: "https://robohash.org/shujaat@test.com")
+user1 = User.create(email: 'shujaat@test.com', password: 'password', name: "Shujaat Azim", age: 31, location: "Potomac, MD", reputation: 20, image: "https://robohash.org/shu@test.com")
 user2 = User.create(email: 'nicholas@test.com', password: 'password', name: "Nicholas Orochena", age: 25, location: "Potomac, MD", reputation: 14, image: "https://robohash.org/nicholas@test.com")
 user3 = User.create(email: 'marcus@test.com', password: 'password', name: "Marcus Orochena", age: 31, location: "Potomac, MD", reputation: 10, image: "https://robohash.org/marcus@test.com")
 user4 = User.create(email: 'omar@test.com', password: 'password', name: "Omar Ayyub", age: 30, location: "Washington, DC", reputation: 17, image: "https://robohash.org/omar@test.com")
