@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
+        @user = User.find(user_params)
         render json: @user.to_json(:include => [:chats, :messages])
     end
 
