@@ -1,4 +1,4 @@
-
+puts 'Seeding...'
 User.destroy_all
 Chat.destroy_all
 UserChat.destroy_all
@@ -74,3 +74,5 @@ message17 = Message.create(content: "bernie is the best of the lot, as far as I 
 message18 = Message.create(content: "but that's not enough to be president", chat_id: chat9.id, user_id: user4.id)
 message11 = Message.create(content: "anyone but trump, honestly", chat_id: chat10.id, user_id: user6.id)
 message11 = Message.create(content: "that's fair, but there's over 10 others then", chat_id: chat10.id, user_id: user3.id)
+
+puts "Done!"

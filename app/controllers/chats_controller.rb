@@ -2,7 +2,7 @@ class ChatsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @chats = Chat.all
+        @chats = Chat.where(inactive: false).order(created_at: :desc)
         render json: @chats.to_json(:include => [:users, :topic, :messages])
     end
 
@@ -26,6 +26,9 @@ class ChatsController < ApplicationController
     end
 
     def update
+        @chat = Chat.find(params[:id])
+        @chat.update(chat_params)
+        render json: @chat
     end
 
     def destroy
@@ -36,7 +39,7 @@ class ChatsController < ApplicationController
     private 
 
     def chat_params
-        params.require(:chat).permit(:topic)
+        params.require(:chat).permit(:topic, :inactive)
     end
 
 end
