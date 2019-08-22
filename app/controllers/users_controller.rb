@@ -15,4 +15,9 @@ class UsersController < ApplicationController
         render json: @current_user
     end
 
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+    end
+
 end
