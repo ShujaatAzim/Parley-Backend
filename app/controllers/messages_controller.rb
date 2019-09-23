@@ -22,15 +22,6 @@ class MessagesController < ApplicationController
         render json: @message
     end
 
-    def edit
-    end
-
-    def update
-    end
-
-    def destroy
-    end
-
     private
 
     def message_params

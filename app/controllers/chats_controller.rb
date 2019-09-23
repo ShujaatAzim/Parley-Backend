@@ -11,18 +11,11 @@ class ChatsController < ApplicationController
         render json: @chat.to_json(:include => [:users, :topic, :messages])
     end
 
-    def new
-        # @chat = Chat.new
-    end
-
     def create
         chat = Chat.create!(topic_id: params[:topic].to_i)
         user_chats = UserChat.create!(chat: chat, user_id: params[:user_id])
         user_chats2 = UserChat.create!(chat: chat, user: User.where.not(id: @current_user.id).sample)
         render json: chat
-    end
-
-    def edit
     end
 
     def update
